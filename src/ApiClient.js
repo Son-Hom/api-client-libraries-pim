@@ -32,11 +32,11 @@ class ApiClient {
    * Overrides the default value set in spec file if present
    * @param {String} basePath
    */
-  constructor(basePath = "https://dev.aimlapps.com") {
+  constructor(basePath = process.env.VUE_APP_BACKEND_URL) {
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://dev.aimlapps.com
+     * @default process.env.VUE_APP_BACKEND_URL
      */
     this.basePath = basePath.replace(/\/+$/, "");
 
